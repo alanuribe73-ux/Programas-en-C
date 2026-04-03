@@ -1,0 +1,10 @@
+El código selecciona al nodo que tiene el menor costo acumulado desde el origen y que aún no ha sido visitado.
+
+| Variable  | Qué representa                                                          | Ejemplo                              |
+| --------- | ----------------------------------------------------------------------- | ------------------------------------ |
+| `tam`     | Número total de nodos en el grafo                                       | Si hay 6 vértices, `tam = 6`         |
+| `w`       | El **nodo que se está analizando** en ese momento                       | Recorre 0, 1, 2, 3, 4, 5             |
+| `s[w]`    | Indica si el nodo `w` ya fue **visitado** (1) o **no visitado** (0)     | `s[2] = 1` → el nodo 2 ya se procesó |
+| `dist[w]` | Guarda el **costo acumulado mínimo** conocido desde el origen hasta `w` | `dist[2] = 2`                        |
+| `u`       | El **nodo con la menor distancia actual** encontrado                    | Se usa para expandir sus caminos     |
+| `min`     | El valor más pequeño de distancia entre los nodos no visitados          | Inicializa en 9999 (∞)               |
